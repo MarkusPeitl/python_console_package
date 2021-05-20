@@ -1,0 +1,3 @@
+#Include additional non-python files into your application
+include package/*.txt
+include package/models/*.txt

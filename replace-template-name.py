@@ -1,0 +1,1 @@
+# This is just a helper script to rename the template to a project name of your choice
