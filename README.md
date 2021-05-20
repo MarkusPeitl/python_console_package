@@ -81,6 +81,12 @@ python3 publish.py
 ```
 
 Build the application and upload to pypi using twine (make sure everything is working before as you can not replace a version once it is online).  
+After you have published the package, tag your package version and push to your git repository.
+
+1. Commit your changes `git commit -am "your message"`
+2. Push your changes `git push`
+3. Create a version tag in your repository `git tag 1.0.0`
+4. Push the tag to your repository `git push --tags`
 
 ### README.md
 
