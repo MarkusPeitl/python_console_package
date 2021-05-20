@@ -5,7 +5,7 @@ def multiply(numbers):
     for number in numbers:
         result *= number
 
-    return number
+    return result
 
 
 def print_module():

@@ -4,10 +4,10 @@ with open("README.md","r") as readme_file:
     long_description = readme_file.read()
 
 #Maybe not the best way to handle the version number, but it works fine
-exec(open("package/__init__.py").read())
+exec(open("python_console_package/__init__.py").read())
 
 setup(
-    name='rnmd',
+    name='python_console_package',
     version = __version__,
     include_package_data = True,
     python_requires = '>=3',
@@ -26,7 +26,7 @@ setup(
     ],
     install_requires=["argparse"],
     entry_points = {
-        'console_scripts':['entrypoint = package.entrypoint:main']
+        'console_scripts':['python_console_package = python_console_package.entrypoint:main']
     },
     packages = find_packages()
 )

@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
 import argparse
-import yourpackage
-from yourpackage.models.mymodel import MyModelClass
-from yourpackage.models.module_functions import multiply
-import yourpackage.models.module_functions
+import python_console_package
+from python_console_package.models.mymodel import MyModelClass
+from python_console_package.models.module_functions import multiply
+import python_console_package.models.module_functions
 
 def main():
 
     parser = argparse.ArgumentParser(
-        description="Compile markdown bash documentation to executable program scripts"
+        description="Template for building python console packages"
     )
 
     basegroup = parser.add_mutually_exclusive_group()
@@ -28,7 +28,7 @@ def main():
     if(arguments.setup):
         print("Calling application setup procedure")
     elif(arguments.version):
-        print(yourpackage.__version__)
+        print(python_console_package.__version__)
     elif(arguments.option):
         print(arguments.source)
         print(arguments.option)
@@ -38,7 +38,7 @@ def main():
         print("Result: ")
         print(str(multiply(arguments.multiply)))
     elif(arguments.printm):
-        yourpackage.models.module_functions.print_module()
+        python_console_package.models.module_functions.print_module()
         my_model_instance = MyModelClass()
         print(my_model_instance.some_basic_text)
         my_model_instance.call_something()

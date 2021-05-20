@@ -1,6 +1,6 @@
-# Your python console application
+# Python console package
 
-This is a small template for building and distributing a python console application.
+This is a small template for building, distributing and packaging a python console application.
 
 **TODOS:**
 
@@ -12,12 +12,12 @@ This is a small template for building and distributing a python console applicat
 Can be easily installed from pypi with pip3.
 
 ```bash
-pip3 install python_console_template
+pip3 install python_console_package
 ```
 
 ## Running from source
 
-You can also alway clone the repo from [GitHub](https://github.com/MarkusPeitl/python-console-template) and run with python.
+You can also alway clone the repo from [GitHub](https://github.com/MarkusPeitl/python_console_package) and run with python.
 
 ```bash
 python3 launcher.py "this/is/my/source/path"
@@ -29,8 +29,7 @@ or by
 python3 entrypoint.py "this/is/my/source/path"
 ```
 
-If installed through pypi then executing the script name `entrypoint` essentially runs something like `python3 package/entrypoint.py`,
-which is used in the further usage examples.
+If installed through pypi then executing the script name `python_console_package` essentially runs something like `python3 python_console_package/entrypoint.py` (this is specified through `entry_points` in **setup.py**),which is used in the further usage examples.
 
 ## FILES and their functions
 
@@ -48,7 +47,7 @@ to build and package the application using setuptools to the **dist** directory.
 python3 entrypoint.py
 ```
 
-this is a launcher for the main script, can be used interchangably with package/entrypoint.py.  
+this is a launcher for the main script, can be used interchangably with python_console_package/entrypoint.py.  
 
 ### install-dev.py
 
@@ -100,11 +99,43 @@ Contains:
 - Meta information like: author, version, classifiers, url, description
 - Importent information about the structure and files of your package for installation: modules, entrypoints, name, dependencies
 
-## Usage: Setting up app
+## Using the application
 
 ```bash
-entrypoint --setup
+python_console_package --setup
 ```
+
+If you want to provide a setup function to your users you can implement a function call when this options is specified.
+
+```bash
+python_console_package --version
+```
+
+Print out the version information of your package
+
+```bash
+python_console_package "test/path/source"
+```
+
+Call application with a positional text argument.
+
+```bash
+python_console_package "test/path/source" --option "my optional argument text"
+```
+
+Call application with a optional text argument.
+
+```bash
+python_console_package "test/path/source" --multiply 1 2 3 8 96
+```
+
+Call application with an optional argument list.
+
+```bash
+python_console_package "test/path/source" --printm
+```
+
+Call the application with an optional boolean option.
 
 ### If you like the project consider dropping me a coffee
 
