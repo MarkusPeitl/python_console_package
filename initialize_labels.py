@@ -1,9 +1,7 @@
 import os
 
-#author = input("What is your name (author)? ")
-#package = input("What is the name of your package? ")
-author="max max"
-package="new_package_name"
+author = input("What is your name (author)? ")
+package = input("What is the name of your package? ")
 
 replacements = [
     ("python_console_package", package),
